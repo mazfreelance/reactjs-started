@@ -8,9 +8,17 @@ class Counter extends Component {
         this.state = {
             counter: 0,
         }
+        this.incrementEventBinding = this.incrementEventBinding.bind(this)
     }
 
     increment() {
+        this.setState({
+            counter: this.state.counter + 1,
+        })
+    }
+
+    incrementEventBinding = () => {
+        console.log(this)
         this.setState({
             counter: this.state.counter + 1,
         })
@@ -20,6 +28,8 @@ class Counter extends Component {
             <>
                 <h3>Count value is: {this.state.counter}</h3>
                 <button onClick={() => this.increment()}>Increment</button>
+                <br/>
+                <button onClick={this.incrementEventBinding}>Increment Event Binding</button>
             </>
         )
     }
