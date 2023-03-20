@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import Counter from './components/Counter';
+import FunctionEvent from './components/FunctionEvent';
 import Hello from './components/Hello'
 import Message from './components/Message';
 import Profile from './components/Profile';
@@ -16,6 +17,7 @@ function App() {
       </Profile>
       <Counter/>
       <Resume name="Latif"/>
+      <FunctionEvent></FunctionEvent>
     </div>
   );
 }
